@@ -1,0 +1,338 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: #f1f2f5;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Navbar */
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    -webkit-text-fill-color: #ff6914;
+    transition: all 0.4s ease 0s;
+}
+
+.orange-color {
+    color: #ff6914!important;
+}
+
+.navbtn {
+    transition: 0.3s!important;
+    background-color: #ff6914!important;
+}
+
+.navbtn:hover {
+    background-color: rgba(255, 141, 75, 0.767)!important;
+}
+
+.btn-lg:hover {
+    background-color: rgba(255, 255, 255, 0.555)!important;
+}
+
+
+/* translation area */
+
+.card {
+    position: relative;
+}
+
+.card a:hover {
+    background-color: #fd660e31!important;
+}
+
+.card .btn:hover::before {
+    position: absolute;
+    content: "Copy To Cliboard";
+    height: 50px;
+    width: 100px;
+    background-color: #fd660e8f;
+    top: 185px;
+    left: 90px;
+    border-radius: 0px 15px 15px;
+}
+
+.card .btn:focus::before {
+    position: absolute;
+    content: "Copied!";
+    height: 25px;
+    width: 100px;
+    background-color: #fd660e8f;
+    top: 185px;
+    left: 90px;
+    border-radius: 0px 15px 15px;
+}
+
+/* First Fixed Img */
+.first-img {
+    background-image: url("../images/caro-1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+}
+
+/* Second Fixed Img */
+.second-img {
+    background-image: url("../images/caro-2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+}
+
+/* Popular Destination in ALexandria */
+.popular-card {
+    position: relative;
+    min-height: 450px;
+}
+
+.popular-card .btn {
+    position: absolute;
+    bottom: 35px;
+    right: 13px;
+    z-index: 2;
+    background-color: #ff6914;
+}
+
+.popular-card::after {
+    position: absolute;
+    content: "";
+
+    top: 0%;
+    left: 0%;
+
+    width: 0%;
+    height: 0%;
+
+    background-color: #fd660e8f;
+    opacity: 0.3;
+    transition: 1s;
+}
+
+.popular-card::before {
+    position: absolute;
+    content: "";
+
+    bottom: 0%;
+    right: 0%;
+
+    width: 0%;
+    height: 0%;
+
+    background-color: #fd660e;
+    opacity: 0.3;
+    transition: 1s;
+}
+
+.popular-card:hover::after, .popular-card:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.popular-card h5 {
+    color: #ff6914;
+}
+
+.popular-card p {
+    color: #ff6914;
+}
+
+/* Thanks Cards */
+
+.thanks-card {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+    color: white;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.first-image {
+    background-image: url("../images/person-1.jpg");
+    background-size: cover;
+}
+
+.second-image {
+    background-image: url("../images/person-2.jpg");
+    background-size: cover;
+}
+
+.third-image {
+    background-image: url("../images/person-3.jpg");
+    background-size: cover;
+}
+
+.thanks-card:hover {
+    transform: scale(0.9);
+}
+
+.thanks-card:hover .overlay {
+    padding-top: 50px;
+    background-color: #fd660e8f;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color:rgba(128, 128, 128, 0.5);
+    padding: 32px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.overlay h2 {
+    font-size: 23px;
+    color: white;
+}
+
+.lower-content {
+    position: absolute;
+    bottom: 12px;
+    left: 32px;
+}
+
+.thanks-card-photo {
+    width: 100px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    height: 125px;
+    background-size: cover;
+}
+
+.first-image .thanks-card-photo {
+    background-image: url("../images/person-1.jpg");
+    background-size: cover;
+}
+
+.second-image .thanks-card-photo {
+    background-image: url("../images/person-2.jpg");
+    background-size: cover;
+}
+
+.third-image .thanks-card-photo {
+    background-image: url("../images/person-3.jpg");
+    background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    .thanks-card {
+        margin-bottom: 25px;
+    }
+}
+
+
+/* news */
+
+.news-box {
+    border-radius: 10px;
+    margin-bottom: 80px ;
+    overflow: hidden;
+}
+
+.news-box:nth-child(2n+1) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.news-box:nth-child(2n+0) {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    padding: 36px;
+    width: 75%;
+    position: relative;
+}
+
+.news-box .content::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -10%;
+    height: 111%;
+    width: 50px;
+    background-color: white;
+}
+
+.news-box:nth-child(2n+1) .content::before {
+    right: -22px;
+    transform: rotate(-4deg);
+}
+
+.news-box:nth-child(2n+0) .content::before {
+    transform: rotate(4deg);
+    left: -24px;
+}
+
+.news-hr {
+    width: 50px;
+    height: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: all 0.5s;
+    background-color: #ff6914;
+}
+
+.news-title a{
+    color: #ff6914!important;
+}
+
+.news-box:hover .news-hr {
+    width: 100px;
+}
+
+.news-buttons {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    padding: 0;
+    font-size: 14px;
+}
+
+.news-box-item {
+    margin: 50px 10px 0 0;
+    background-color: rgb(220, 220, 220);
+    padding: 4px 8px;
+}
+
+.news-box .image {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.news-box .image img{
+    width: 300px;
+    height: max-content;
+    transition: all 0.3s;
+}
+
+.news-box:hover .image img {
+    transform: scale(1.1);
+}
+
+
+.logoicon {
+    height: 80px;
+    width: 80px;
+    box-shadow: rgb(201, 198, 241) -3px -3px 20px 10px;
+    border-radius: 50%;
+    transition: all 1s ease 0s;
+}
